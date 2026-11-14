@@ -1,18 +1,18 @@
-# api-changelog-rss
+# openapi-changelog-diff
 
 Paste two OpenAPI specs, get a structured changelog: added, removed, changed, breaking. Export as Markdown. Single HTML file, browser-only.
 
-**Live demo:** https://0xelitesystem.github.io/api-changelog-rss/
+**Live demo:** https://0xelitesystem.github.io/openapi-changelog-diff/
 
 ## Why this exists
 
 Every API team that updates a spec needs to communicate what changed to consumers. Most teams either skip this entirely (bad) or maintain it by hand (slow and error-prone). This tool reads the structural changes and produces the changelog automatically.
 
-The repo name says "RSS" because that was the original ambition (auto-watch a spec URL and emit a feed); the simpler tool ships first. RSS-from-URL would require a backend fetcher; this in-browser version covers the manual diff use case. It is one HTML file with no tracking and no network calls, MIT licensed.
+Watching a spec URL and emitting a feed would need a backend fetcher; this in-browser version covers the manual diff use case. It is one HTML file with no tracking and no network calls, MIT licensed.
 
 ## Use
 
-Open `index.html` in any browser. Or visit `https://0xelitesystem.github.io/api-changelog-rss/` once Pages is enabled.
+Open `index.html` in any browser. Or visit `https://0xelitesystem.github.io/openapi-changelog-diff/` once Pages is enabled.
 
 1. Paste the old spec (JSON or YAML) on the left
 2. Paste the new spec on the right
@@ -95,7 +95,7 @@ Example output for the bundled sample:
 ## What it doesn't do
 
 - Doesn't fetch specs from URLs. (That would require a server. Paste manually for now.)
-- Doesn't generate an RSS feed. (Same reason. The repo name reflects ambition, not current scope.)
+- Doesn't generate an RSS feed. (That would need a server too.)
 - Doesn't handle OpenAPI 2.0 (Swagger). 3.x only.
 - Doesn't dive into nested schema diffs (request/response body shape changes beyond presence). For schema-level diffing, look at `oasdiff` or `openapi-diff`.
 - Doesn't audit for spec validity. If your specs aren't valid OpenAPI, results are undefined.
@@ -107,8 +107,8 @@ Both specs are parsed and compared in your browser. Nothing is uploaded, and the
 ## Run locally
 
 ```
-git clone https://github.com/0xelitesystem/api-changelog-rss
-cd api-changelog-rss
+git clone https://github.com/0xelitesystem/openapi-changelog-diff
+cd openapi-changelog-diff
 ```
 
 Open `index.html` in any modern browser, or serve the folder with `python -m http.server 8000` and visit http://localhost:8000/.
