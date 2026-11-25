@@ -129,4 +129,4 @@ MIT. See [LICENSE](LICENSE).
 
 - [json-value-to-ts-interfaces](https://github.com/0xelitesystem/json-value-to-ts-interfaces), generate TypeScript types from JSON
 - [csv-to-anything](https://github.com/0xelitesystem/csv-to-anything), convert CSV to JSON/SQL/Markdown/TS
-- [webhook-inspector](https://github.com/0xelitesystem/webhook-inspector), inspect incoming webhook payloads
+- [service-worker-webhook-inspector](https://github.com/0xelitesystem/service-worker-webhook-inspector), inspect incoming webhook payloads
